@@ -1,4 +1,4 @@
-const {SlashCommandBuilder, EmbedBuilder} = require("discord.js");
+const {SlashCommandBuilder} = require("discord.js");
 const fs = require('fs');
 
 const idx = (len) => Math.floor(Math.random() * (len));
