@@ -1,10 +1,12 @@
-const { SlashCommandBuilder } = require('discord.js');
+const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('purge')
 		.setDescription('deletes specified amount of messages.')
-		.addIntegerOption(option => option.setName('amount').setDescription('Number of messages to purge')),
+		.addIntegerOption(option => option.setName('amount').setDescription('Number of messages to purge'))
+		.setDefaultMemberPermissions(PermissionFlagsBits.ManageMessages),
+		
 	async execute(interaction) {
 		const amount = interaction.options.getInteger('amount');
 
