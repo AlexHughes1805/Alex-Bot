@@ -2,10 +2,12 @@ const {SlashCommandBuilder} = require("discord.js");
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName('swear')
-		.setDescription('Teaches you a lesson'),
+		.setName('Ping')
+		.setDescription('A classic game'),
 	async execute(interaction)
     {
-		await interaction.reply("Bruh, swearing is bad. Don't do it again.");
+		await interaction.reply("Pong!");
 	},
 };
+
+// classic call and response
