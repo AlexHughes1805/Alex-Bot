@@ -4,7 +4,7 @@ module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('purge') // command name
 		.setDescription('deletes specified amount of messages.') // command description
-		.addIntegerOption(option => option.setName('amount').setDescription('Number of messages to purge')) // integer option, the amount of messages memeber wants to delete
+		.addIntegerOption(option => option.setName('amount').setDescription('Number of messages to purge')) // integer option, the amount of messages member wants to delete
 		.setDefaultMemberPermissions(PermissionFlagsBits.ManageMessages), // only show command if user has 'manage messages' permission
 		
 	async execute(interaction) {
